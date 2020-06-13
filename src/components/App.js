@@ -1,15 +1,15 @@
 import React from "react";
 // import Footer from './Footer'
 import BooksForm from "./BooksForm.js";
-// import BooksList from "./BooksList";
+import BooksList from "./BooksList";
 // import GetStoreData from "./GetStoreData";
-import CategoryBooklist from "../containers/CategoryBooklist";
+// import CategoryBooklist from "../containers/CategoryBooklist";
 
 const App = () => (
   <div>
     <BooksForm />
-    <CategoryBooklist />
-    {/* <BooksList /> */}
+    {/* <CategoryBooklist /> */}
+    <BooksList />
     {/* <CategoryBooklist /> */}
     {/* <VisibleTodoList /> */}
     {/* <Footer /> */}
