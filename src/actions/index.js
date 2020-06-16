@@ -1,15 +1,19 @@
-let nextBookId = 0;
+import getId from "../utils/getId";
+
+// let nextBookId = 0;
 // defihning actions createBook and deleteBook
 // addBook will be used by Reducers/book.js
-export const addBook = (title, category) => ({
+export const createBook = (title, category) => ({
   type: "CREATE_BOOK",
-  id: nextBookId++,
+  id: getId(),
   title,
   category
 });
 
-export const deleteBook = title => ({
-  type: "REMOVE_BOOK"
+export const removeBook = id => ( {
+  
+  type: "REMOVE_BOOK",
+  id
 });
 
 export const setCategoryFilter = filter => ({

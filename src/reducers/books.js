@@ -1,17 +1,20 @@
 const books = (state = [], action) => {
+  // console.log(action);
   switch (action.type) {
     case "CREATE_BOOK":
+      // console.log(action);
       return [
         ...state,
         {
           id: action.id,
-          text: action.text,
+          title: action.title,
           category: action.category
         }
       ];
     case "REMOVE_BOOK":
+      console.log("rb", action);
       // return state.map(book => (book.id === action.id ? { ...book } : todo));
-      return state.map(book => ({ ...book }));
+      return state.filter(book => book.id !== action.id);
     default:
       return state;
   }

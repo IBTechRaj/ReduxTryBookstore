@@ -5,13 +5,14 @@ import { Provider } from "react-redux";
 import rootReducer from "./reducers";
 import "./index.css";
 import App from "./components/App.js";
+import getId from "./utils/getId";
 
 import * as serviceWorker from "./serviceWorker";
 
 const initialState = {
   books: [
-    { id: 1, title: "First Flight", category: "HISTORY" },
-    { id: 2, title: "Second Choice", category: "ACTION" }
+    { id: getId(), title: "First Flight", category: "HISTORY" },
+    { id: getId(), title: "Second Choice", category: "ACTION" }
   ]
 };
 const store = createStore(rootReducer, initialState);
