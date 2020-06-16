@@ -10,24 +10,28 @@ export const createBook = (title, category) => ({
   category
 });
 
-export const removeBook = id => ( {
-  
+export const removeBook = id => ({
   type: "REMOVE_BOOK",
   id
 });
 
-export const setCategoryFilter = filter => ({
-  type: "SET_CATEGORY_FILTER",
+// export const setCategoryFilter = filter => ({
+//   type: "SET_CATEGORY_FILTER",
+//   filter
+// });
+
+export const changeFilter = filter => ({
+  type: "CHANGE_FILTER",
   filter
 });
 
-export const CategoryFilters = {
-  ACTION: "ACTION",
-  BIOGRAPHY: "BIOGRAPHY",
-  HISTORY: "HISTORY",
-  HORROR: "HORROR",
-  KIDS: "KIDS",
-  LEARNING: "LEARNING",
-  SCIFI: "SCIFI",
-  ALL: "ALL"
-};
+// export const ChangeFilter = {
+//   ACTION: "ACTION",
+//   BIOGRAPHY: "BIOGRAPHY",
+//   HISTORY: "HISTORY",
+//   HORROR: "HORROR",
+//   KIDS: "KIDS",
+//   LEARNING: "LEARNING",
+//   SCIFI: "SCIFI",
+//   ALL: "ALL"
+// };

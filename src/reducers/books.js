@@ -2,7 +2,7 @@ const books = (state = [], action) => {
   // console.log(action);
   switch (action.type) {
     case "CREATE_BOOK":
-      // console.log(action);
+      console.log("cb", action);
       return [
         ...state,
         {

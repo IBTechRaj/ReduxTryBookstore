@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import rootReducer from "./reducers";
+import reducer from "./reducers";
 import "./index.css";
 import App from "./components/App.js";
 import getId from "./utils/getId";
@@ -11,11 +11,13 @@ import * as serviceWorker from "./serviceWorker";
 
 const initialState = {
   books: [
-    { id: getId(), title: "First Flight", category: "HISTORY" },
-    { id: getId(), title: "Second Choice", category: "ACTION" }
-  ]
+    { id: getId(), title: "First Flight", category: "History" },
+    { id: getId(), title: "Second Choice", category: "Action" }
+  ],
+  filter: "All"
 };
-const store = createStore(rootReducer, initialState);
+
+const store = createStore(reducer, initialState);
 
 ReactDOM.render(
   <Provider store={store}>

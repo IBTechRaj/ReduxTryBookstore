@@ -1,5 +1,5 @@
 import React from "react";
-// import Footer from './Footer'
+// import CategoryFilter from "./Filter";
 import BooksForm from "./BooksForm.js";
 import BooksList from "./BooksList";
 // import GetStoreData from "./GetStoreData";
@@ -7,9 +7,11 @@ import BooksList from "./BooksList";
 
 const App = () => (
   <div>
-    <BooksForm />
+    {/* <CategoryFilter /> */}
+
     {/* <CategoryBooklist /> */}
     <BooksList />
+    <BooksForm />
     {/* <CategoryBooklist /> */}
     {/* <VisibleTodoList /> */}
     {/* <Footer /> */}
